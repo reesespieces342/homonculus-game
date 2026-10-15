@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btusvri1d08jo"]
 
-[ext_resource type="Script" uid="uid://b8oiru13c270b" path="res://clickable_area/clickable.gd" id="1_1t2iq"]
+[ext_resource type="Script" uid="uid://b8oiru13c270b" path="res://homunculus/clickable.gd" id="1_1t2iq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qqvtf"]
 
