@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://btusvri1d08jo"]
+
+[ext_resource type="Script" uid="uid://b8oiru13c270b" path="res://homunculus/clickable.gd" id="1_1t2iq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qqvtf"]
+
+[node name="ClickableArea" type="Area2D" unique_id=1771058321]
+script = ExtResource("1_1t2iq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1358988743]
+scale = Vector2(7, 7)
+shape = SubResource("RectangleShape2D_qqvtf")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
