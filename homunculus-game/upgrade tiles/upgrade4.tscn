@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ctn4bpuwvb2bq"]
+
+[ext_resource type="Script" uid="uid://cfneem4jgx80m" path="res://upgrade tiles/upgrade_tile.gd" id="1_rj2oh"]
+[ext_resource type="Texture2D" uid="uid://fv1vltsiqskq" path="res://assets/background/upgrade_button_unselected.png" id="2_4drgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2838g"]
+size = Vector2(370, 110)
+
+[node name="UpgradeTile" type="Area2D" unique_id=1483650311]
+script = ExtResource("1_rj2oh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=279736040]
+texture = ExtResource("2_4drgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=522114944]
+shape = SubResource("RectangleShape2D_2838g")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
