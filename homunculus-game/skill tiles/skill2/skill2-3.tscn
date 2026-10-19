@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://oul2prktuoya"]
+
+[ext_resource type="Script" uid="uid://cbpoeft2eyfv" path="res://skill tiles/skill_tile.gd" id="1_3awox"]
+[ext_resource type="Texture2D" uid="uid://dkuu5y2am3iff" path="res://assets/background/round_button_unselected.png" id="2_ee34y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2838g"]
+radius = 47.60745
+
+[node name="Skill2-3" type="Area2D" unique_id=1371862040]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_3awox")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1218452919]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_ee34y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=513196331]
+scale = Vector2(0.8, 0.8)
+shape = SubResource("CircleShape2D_2838g")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

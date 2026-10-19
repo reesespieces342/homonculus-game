@@ -27,8 +27,11 @@ window/stretch/aspect="expand"
 
 folder_colors={
 "res://assets/": "red",
+"res://background/": "green",
 "res://globals/": "red",
-"res://main/": "orange"
+"res://main/": "orange",
+"res://skill tiles/": "purple",
+"res://upgrade tiles/": "teal"
 }
 
 [physics]

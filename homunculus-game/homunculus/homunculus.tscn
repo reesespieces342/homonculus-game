@@ -1,15 +1,60 @@
 [gd_scene format=3 uid="uid://btusvri1d08jo"]
 
 [ext_resource type="Script" uid="uid://b8oiru13c270b" path="res://homunculus/homunculus.gd" id="1_tjnj4"]
-[ext_resource type="Texture2D" uid="uid://bubcqeay64hl7" path="res://assets/homonculus/homunculus1.png" id="2_220ha"]
+[ext_resource type="Texture2D" uid="uid://chyu3pyj7xbxo" path="res://assets/homonculus/homunculus_spritesheet.png" id="2_tjnj4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_220ha"]
+atlas = ExtResource("2_tjnj4")
+region = Rect2(0, 60, 300, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63nym"]
+atlas = ExtResource("2_tjnj4")
+region = Rect2(300, 60, 300, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tqxt"]
+atlas = ExtResource("2_tjnj4")
+region = Rect2(600, 60, 300, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd044"]
+atlas = ExtResource("2_tjnj4")
+region = Rect2(900, 60, 300, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2838g"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_220ha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63nym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tqxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jd044")
+}],
+"loop": 1,
+"name": &"homunculus",
+"speed": 1.5
+}]
 
 [node name="Homunculus" type="Area2D" unique_id=1771058321]
 script = ExtResource("1_tjnj4")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1536376886]
-texture = ExtResource("2_220ha")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=837186965]
+sprite_frames = SubResource("SpriteFrames_2838g")
+animation = &"homunculus"
+autoplay = "homunculus"
+frame_progress = 0.35306346
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=419780902]
+position = Vector2(0, 39)
 polygon = PackedVector2Array(12, -145, 50, -139, 61, -114, 68, -113, 75, -105, 75, -71, 70, -48, 72, -19, 79, 6, 87, 18, 83, 42, 71, 57, 57, 61, 45, 68, 27, 72, -3, 71, -20, 66, -49, 64, -59, 60, -69, 51, -73, 43, -83, 23, -90, -11, -91, -44, -85, -60, -72, -93, -71, -100, -62, -117, -43, -129, -31, -135, -8, -138)
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
