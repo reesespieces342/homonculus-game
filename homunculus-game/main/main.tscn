@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cywoh0fa70cg4" path="res://background/background.tscn" id="1_53q0u"]
 [ext_resource type="PackedScene" uid="uid://bwhnur23cu8dx" path="res://upgrade tiles/upgrade1.tscn" id="3_4hmqs"]
+[ext_resource type="PackedScene" uid="uid://barvmt4jlxtpb" path="res://text/label.tscn" id="3_piupu"]
 [ext_resource type="PackedScene" uid="uid://btusvri1d08jo" path="res://homunculus/homunculus.tscn" id="3_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://c6psfwv1eobmk" path="res://skill tiles/skill1/skill1.tscn" id="4_c651c"]
 [ext_resource type="PackedScene" uid="uid://bkfniluxs5qwv" path="res://upgrade tiles/upgrade2.tscn" id="4_piupu"]
@@ -28,9 +29,15 @@ centered = false
 [node name="Homunculus" parent="." unique_id=1771058321 instance=ExtResource("3_xwkvk")]
 position = Vector2(576, 329)
 
+[node name="Label" parent="." unique_id=237445989 instance=ExtResource("3_piupu")]
+offset_left = 774.0
+offset_top = 8.0
+offset_right = 852.0
+offset_bottom = 41.0
+
 [node name="UpgradeTiles" type="Node" parent="." unique_id=1664915217]
 
-[node name="UpgradeTile" parent="UpgradeTiles" unique_id=1483650311 instance=ExtResource("3_4hmqs")]
+[node name="UpgradeTile1" parent="UpgradeTiles" unique_id=1483650311 instance=ExtResource("3_4hmqs")]
 position = Vector2(957, 128)
 
 [node name="UpgradeTile2" parent="UpgradeTiles" unique_id=704899338 instance=ExtResource("4_piupu")]

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://barvmt4jlxtpb"]
+
+[ext_resource type="Script" uid="uid://b46xco3g41nng" path="res://text/label.gd" id="1_edyph"]
+
+[node name="Label" type="Label" unique_id=237445989]
+anchors_preset = -1
+anchor_right = 0.07300001
+anchor_bottom = 0.045
+offset_right = -0.0960083
+offset_bottom = -0.16000175
+script = ExtResource("1_edyph")

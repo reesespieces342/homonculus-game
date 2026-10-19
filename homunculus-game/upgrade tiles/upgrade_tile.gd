@@ -1,8 +1,8 @@
 extends Area2D
 
+# Blank textures
 const UNSELECTED = preload("uid://fv1vltsiqskq")
 const SELECTED = preload("uid://cvfpjcwh1b3y")
-
 
 @onready var sprite = $Sprite2D
 

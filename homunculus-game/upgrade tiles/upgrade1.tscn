@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bwhnur23cu8dx"]
 
-[ext_resource type="Script" uid="uid://cfneem4jgx80m" path="res://upgrade tiles/upgrade_tile.gd" id="1_pm821"]
-[ext_resource type="Texture2D" uid="uid://fv1vltsiqskq" path="res://assets/background/upgrade_button_unselected.png" id="2_0srqk"]
+[ext_resource type="Script" uid="uid://d04o3yxeqcwby" path="res://upgrade tiles/upgrade_1.gd" id="1_pm821"]
+[ext_resource type="Texture2D" uid="uid://c6jjn3l2g4qy3" path="res://assets/upgrades/upgrade1unselected.png" id="2_pm821"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2838g"]
 size = Vector2(370, 110)
@@ -10,10 +10,11 @@ size = Vector2(370, 110)
 script = ExtResource("1_pm821")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=279736040]
-texture = ExtResource("2_0srqk")
+texture = ExtResource("2_pm821")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=522114944]
 shape = SubResource("RectangleShape2D_2838g")
 
+[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
