@@ -1,11 +1,27 @@
 [gd_scene format=3 uid="uid://b5yct5xbf078b"]
 
-[ext_resource type="PackedScene" uid="uid://btusvri1d08jo" path="res://homunculus/clickable.tscn" id="1_53q0u"]
-[ext_resource type="PackedScene" uid="uid://c3e7neaak2sai" path="res://globals/globals.tscn" id="1_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://cywoh0fa70cg4" path="res://background/background.tscn" id="1_53q0u"]
+[ext_resource type="PackedScene" uid="uid://03rtaypdowiy" path="res://background/upgrade_tile.tscn" id="2_pjrb6"]
+[ext_resource type="PackedScene" uid="uid://btusvri1d08jo" path="res://homunculus/homunculus.tscn" id="3_xwkvk"]
 
 [node name="Main" type="Node2D" unique_id=1481820260]
 
-[node name="Globals" parent="." unique_id=1042752575 instance=ExtResource("1_pjrb6")]
+[node name="Background" parent="." unique_id=1225892145 instance=ExtResource("1_53q0u")]
+centered = false
 
-[node name="ClickableArea" parent="." unique_id=1771058321 instance=ExtResource("1_53q0u")]
-position = Vector2(77, 76)
+[node name="UpgradeTiles" type="Node" parent="." unique_id=1664915217]
+
+[node name="UpgradeTile1" parent="UpgradeTiles" unique_id=1483650311 instance=ExtResource("2_pjrb6")]
+position = Vector2(957, 129)
+
+[node name="UpgradeTile2" parent="UpgradeTiles" unique_id=1545339755 instance=ExtResource("2_pjrb6")]
+position = Vector2(957, 248)
+
+[node name="UpgradeTile3" parent="UpgradeTiles" unique_id=1756610548 instance=ExtResource("2_pjrb6")]
+position = Vector2(957, 368)
+
+[node name="UpgradeTile4" parent="UpgradeTiles" unique_id=1392441207 instance=ExtResource("2_pjrb6")]
+position = Vector2(957, 488)
+
+[node name="Homunculus" parent="." unique_id=1771058321 instance=ExtResource("3_xwkvk")]
+position = Vector2(570, 349)

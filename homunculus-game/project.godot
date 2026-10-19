@@ -16,7 +16,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*uid://c3e7neaak2sai"
+Globals="*uid://bwfs85dxhin2y"
 
 [display]
 
@@ -37,4 +37,5 @@ folder_colors={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
