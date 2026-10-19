@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://btusvri1d08jo"]
+
+[ext_resource type="Script" uid="uid://b8oiru13c270b" path="res://homunculus/homunculus.gd" id="1_tjnj4"]
+[ext_resource type="Texture2D" uid="uid://bubcqeay64hl7" path="res://assets/homonculus/homunculus1.png" id="2_220ha"]
+
+[node name="Homunculus" type="Area2D" unique_id=1771058321]
+script = ExtResource("1_tjnj4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1536376886]
+texture = ExtResource("2_220ha")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=419780902]
+polygon = PackedVector2Array(12, -145, 50, -139, 61, -114, 68, -113, 75, -105, 75, -71, 70, -48, 72, -19, 79, 6, 87, 18, 83, 42, 71, 57, 57, 61, 45, 68, 27, 72, -3, 71, -20, 66, -49, 64, -59, 60, -69, 51, -73, 43, -83, 23, -90, -11, -91, -44, -85, -60, -72, -93, -71, -100, -62, -117, -43, -129, -31, -135, -8, -138)
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
