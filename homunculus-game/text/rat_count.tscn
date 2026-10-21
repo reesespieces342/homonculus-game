@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b3x7edra5tgrh"]
+
+[ext_resource type="Script" uid="uid://dtfv88pkp5hs6" path="res://text/rat_count.gd" id="1_0pt6t"]
+
+[node name="RatCount" type="Label" unique_id=1093689741]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_0pt6t")

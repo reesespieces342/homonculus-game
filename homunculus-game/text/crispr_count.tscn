@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://djj56tau86qr2"]
+
+[ext_resource type="Script" uid="uid://codkcv6c7nyxe" path="res://text/crispr_count.gd" id="1_wmuel"]
+
+[node name="CRISPRCount" type="Label" unique_id=1411267948]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_wmuel")

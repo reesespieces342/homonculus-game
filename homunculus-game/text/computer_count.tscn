@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://d0xh5f6i58g4k"]
+
+[ext_resource type="Script" uid="uid://bm0miy4gk8iw7" path="res://text/computer_count.gd" id="1_2il15"]
+
+[node name="ComputerCount" type="Label" unique_id=1249910316]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_2il15")

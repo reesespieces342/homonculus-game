@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://1yvhcbxnus7j"]
+
+[ext_resource type="Script" uid="uid://bp7jb8ul4eq0n" path="res://text/cells_per_sec.gd" id="1_23tpk"]
+
+[node name="CellsPerSecond" type="Label" unique_id=948331108]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_23tpk")
