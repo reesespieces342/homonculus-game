@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c5tr6hw21g47j"]
+
+[ext_resource type="Script" uid="uid://lm3yydoc08fn" path="res://text/nano_count.gd" id="1_ua7fs"]
+
+[node name="NanoCount" type="Label" unique_id=819185519]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_ua7fs")

@@ -25,4 +25,4 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 				Globals.cell_count -= 50
 				Globals.nano_count += 1
 				
-			print("Nanomachine count: ", Globals.nano_count)
+				Globals.cells_per_sec += 1

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://barvmt4jlxtpb"]
 
-[ext_resource type="Script" uid="uid://b46xco3g41nng" path="res://text/label.gd" id="1_edyph"]
+[ext_resource type="Script" uid="uid://b46xco3g41nng" path="res://text/cell_count.gd" id="1_edyph"]
 
 [node name="Label" type="Label" unique_id=237445989]
 anchors_preset = -1

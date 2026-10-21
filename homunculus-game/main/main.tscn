@@ -2,17 +2,23 @@
 
 [ext_resource type="PackedScene" uid="uid://cywoh0fa70cg4" path="res://background/background.tscn" id="1_53q0u"]
 [ext_resource type="PackedScene" uid="uid://bwhnur23cu8dx" path="res://upgrade tiles/upgrade1.tscn" id="3_4hmqs"]
-[ext_resource type="PackedScene" uid="uid://barvmt4jlxtpb" path="res://text/label.tscn" id="3_piupu"]
+[ext_resource type="PackedScene" uid="uid://cfkq1h8wykd5p" path="res://main/cells_per_sec.tscn" id="3_oagth"]
+[ext_resource type="PackedScene" uid="uid://barvmt4jlxtpb" path="res://text/cell_count.tscn" id="3_piupu"]
 [ext_resource type="PackedScene" uid="uid://btusvri1d08jo" path="res://homunculus/homunculus.tscn" id="3_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://c6psfwv1eobmk" path="res://skill tiles/skill1/skill1.tscn" id="4_c651c"]
 [ext_resource type="PackedScene" uid="uid://bkfniluxs5qwv" path="res://upgrade tiles/upgrade2.tscn" id="4_piupu"]
+[ext_resource type="PackedScene" uid="uid://c5tr6hw21g47j" path="res://text/nano_count.tscn" id="4_q0sk7"]
 [ext_resource type="PackedScene" uid="uid://esn0buu34kdc" path="res://skill tiles/skill1/skill1-1.tscn" id="5_kfbq2"]
 [ext_resource type="PackedScene" uid="uid://b1hd21ymlwer6" path="res://upgrade tiles/upgrade3.tscn" id="5_q0sk7"]
+[ext_resource type="PackedScene" uid="uid://b3x7edra5tgrh" path="res://text/rat_count.tscn" id="5_vapsy"]
 [ext_resource type="PackedScene" uid="uid://dalysjxaayou2" path="res://skill tiles/skill1/skill1-2.tscn" id="6_4dugh"]
+[ext_resource type="PackedScene" uid="uid://djj56tau86qr2" path="res://text/crispr_count.tscn" id="6_jofbb"]
 [ext_resource type="PackedScene" uid="uid://ctn4bpuwvb2bq" path="res://upgrade tiles/upgrade4.tscn" id="6_vapsy"]
 [ext_resource type="PackedScene" uid="uid://biowmge85lvt" path="res://skill tiles/skill2/skill2.tscn" id="7_4dugh"]
+[ext_resource type="PackedScene" uid="uid://d0xh5f6i58g4k" path="res://text/computer_count.tscn" id="7_re7it"]
 [ext_resource type="PackedScene" uid="uid://c6qp8cxe5b6b2" path="res://skill tiles/skill2/skill2-1.tscn" id="8_67ri8"]
 [ext_resource type="PackedScene" uid="uid://cv865vruee13x" path="res://skill tiles/skill2/skill2-2.tscn" id="9_grrlh"]
+[ext_resource type="PackedScene" uid="uid://1yvhcbxnus7j" path="res://text/cells_per_sec.tscn" id="9_n53tw"]
 [ext_resource type="PackedScene" uid="uid://debkbxwwcvnbm" path="res://skill tiles/skill2/skill2-2-1.tscn" id="10_0i4oc"]
 [ext_resource type="PackedScene" uid="uid://oul2prktuoya" path="res://skill tiles/skill2/skill2-3.tscn" id="11_bsumw"]
 [ext_resource type="PackedScene" uid="uid://85rchdosyucq" path="res://skill tiles/skill2/skill2-4.tscn" id="12_fwcvl"]
@@ -29,11 +35,55 @@ centered = false
 [node name="Homunculus" parent="." unique_id=1771058321 instance=ExtResource("3_xwkvk")]
 position = Vector2(576, 329)
 
-[node name="Label" parent="." unique_id=237445989 instance=ExtResource("3_piupu")]
+[node name="CellsPerSec" parent="." unique_id=54642062 instance=ExtResource("3_oagth")]
+
+[node name="Counters" type="Node" parent="." unique_id=398599919]
+
+[node name="CellCount" parent="Counters" unique_id=237445989 instance=ExtResource("3_piupu")]
 offset_left = 774.0
 offset_top = 8.0
-offset_right = 852.0
-offset_bottom = 41.0
+offset_right = 1059.904
+offset_bottom = 25.839998
+vertical_alignment = 1
+
+[node name="NanoCount" parent="Counters" unique_id=819185519 instance=ExtResource("4_q0sk7")]
+offset_left = 725.0
+offset_top = 73.0
+offset_right = 765.0
+offset_bottom = 96.0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="RatCount" parent="Counters" unique_id=1093689741 instance=ExtResource("5_vapsy")]
+offset_left = 725.0
+offset_top = 193.0
+offset_right = 765.0
+offset_bottom = 216.0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CRISPRCount" parent="Counters" unique_id=1411267948 instance=ExtResource("6_jofbb")]
+offset_left = 725.0
+offset_top = 315.0
+offset_right = 765.0
+offset_bottom = 338.0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ComputerCount" parent="Counters" unique_id=1249910316 instance=ExtResource("7_re7it")]
+offset_left = 725.0
+offset_top = 437.0
+offset_right = 765.0
+offset_bottom = 460.0
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="CellsPerSecond" parent="Counters" unique_id=948331108 instance=ExtResource("9_n53tw")]
+offset_left = 780.0
+offset_top = 567.0
+offset_right = 1136.0
+offset_bottom = 638.0
+vertical_alignment = 1
 
 [node name="UpgradeTiles" type="Node" parent="." unique_id=1664915217]
 
