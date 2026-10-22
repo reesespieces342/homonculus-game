@@ -4,6 +4,7 @@ const UNSELECTED = preload("uid://dcchhiw3rowbt")
 const SELECTED = preload("uid://ddbeadwdeo4mg")
 
 var sp_req : int = 2
+var bought : bool = false
 
 @onready var sprite = $Sprite2D
 @onready var label: Label = $Label
@@ -40,15 +41,20 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			if Globals.skill3:
-				if Globals.skill_points >= sp_req:
+				if not bought:
+					if Globals.skill_points >= sp_req:
+						Globals.skill3_1 = true
+						bought = true
+						
+						Globals.skill_points -= sp_req
+						
+						sprite.texture = SELECTED
+						var tween = create_tween()
+						tween.tween_property(self, "scale", Vector2(1.05, 1.05), .05)
+				else:
 					if Globals.skill3_1:
 						Globals.skill3_1 = false
 					else:
 						Globals.skill3_1 = true
-					
-					suit.emit()
-					Globals.skill_points -= sp_req
-					
-					sprite.texture = SELECTED
-					var tween = create_tween()
-					tween.tween_property(self, "scale", Vector2(1.05, 1.05), .05)
+						
+				suit.emit()
