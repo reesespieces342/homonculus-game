@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3a1yjcgf5ipl"
+path="res://.godot/imported/People shit 8 bit Slipknot Emulation-8 bit Arcade.mp3-2eaa282697d150725a5b2151d0fc00fc.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/People shit 8 bit Slipknot Emulation-8 bit Arcade.mp3"
+dest_files=["res://.godot/imported/People shit 8 bit Slipknot Emulation-8 bit Arcade.mp3-2eaa282697d150725a5b2151d0fc00fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

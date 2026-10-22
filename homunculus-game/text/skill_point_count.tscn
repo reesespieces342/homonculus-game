@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cvpsnr3rj444b"]
+
+[ext_resource type="Script" uid="uid://drhys6ns2jful" path="res://text/skill_point_count.gd" id="1_iu3fy"]
+
+[node name="SkillPointCount" type="Label" unique_id=162876645]
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("1_iu3fy")

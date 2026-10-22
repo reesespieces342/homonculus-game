@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dq73owyoxn5kb"]
+
+[ext_resource type="Script" uid="uid://dtt8b3k3dcchv" path="res://upgrade tiles/skill_point.gd" id="1_4b6f4"]
+[ext_resource type="Texture2D" uid="uid://bboe1i62g8f4b" path="res://assets/upgrades/skillpointunselected.png" id="1_tahnw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2838g"]
+size = Vector2(370, 110)
+
+[node name="SkillPoint" type="Area2D" unique_id=1238220536]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_4b6f4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=697917341]
+texture = ExtResource("1_tahnw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=444063633]
+shape = SubResource("RectangleShape2D_2838g")
+
+[node name="Label" type="Label" parent="." unique_id=1796604164]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

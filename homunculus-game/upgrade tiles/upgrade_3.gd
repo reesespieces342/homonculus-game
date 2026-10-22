@@ -24,4 +24,4 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			if Globals.cell_count >= 1000:
 				Globals.cell_count -= 1000
 				Globals.crispr_count += 1
-				Globals.cells_per_sec += 25
+				Globals.cells_per_sec += Globals.cpcrispr

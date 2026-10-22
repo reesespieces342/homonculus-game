@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5yct5xbf078b"]
 
 [ext_resource type="PackedScene" uid="uid://cywoh0fa70cg4" path="res://background/background.tscn" id="1_53q0u"]
+[ext_resource type="Script" uid="uid://cp53phceh34kw" path="res://main/main.gd" id="1_qs5eo"]
 [ext_resource type="PackedScene" uid="uid://bwhnur23cu8dx" path="res://upgrade tiles/upgrade1.tscn" id="3_4hmqs"]
 [ext_resource type="PackedScene" uid="uid://cfkq1h8wykd5p" path="res://main/cells_per_sec.tscn" id="3_oagth"]
 [ext_resource type="PackedScene" uid="uid://barvmt4jlxtpb" path="res://text/cell_count.tscn" id="3_piupu"]
@@ -8,11 +9,13 @@
 [ext_resource type="PackedScene" uid="uid://c6psfwv1eobmk" path="res://skill tiles/skill1/skill1.tscn" id="4_c651c"]
 [ext_resource type="PackedScene" uid="uid://bkfniluxs5qwv" path="res://upgrade tiles/upgrade2.tscn" id="4_piupu"]
 [ext_resource type="PackedScene" uid="uid://c5tr6hw21g47j" path="res://text/nano_count.tscn" id="4_q0sk7"]
+[ext_resource type="PackedScene" uid="uid://b77aymssi3g5r" path="res://main/music.tscn" id="5_frbr6"]
 [ext_resource type="PackedScene" uid="uid://esn0buu34kdc" path="res://skill tiles/skill1/skill1-1.tscn" id="5_kfbq2"]
 [ext_resource type="PackedScene" uid="uid://b1hd21ymlwer6" path="res://upgrade tiles/upgrade3.tscn" id="5_q0sk7"]
 [ext_resource type="PackedScene" uid="uid://b3x7edra5tgrh" path="res://text/rat_count.tscn" id="5_vapsy"]
 [ext_resource type="PackedScene" uid="uid://dalysjxaayou2" path="res://skill tiles/skill1/skill1-2.tscn" id="6_4dugh"]
 [ext_resource type="PackedScene" uid="uid://djj56tau86qr2" path="res://text/crispr_count.tscn" id="6_jofbb"]
+[ext_resource type="PackedScene" uid="uid://b4sag4svfb86v" path="res://main/click.tscn" id="6_o8j3b"]
 [ext_resource type="PackedScene" uid="uid://ctn4bpuwvb2bq" path="res://upgrade tiles/upgrade4.tscn" id="6_vapsy"]
 [ext_resource type="PackedScene" uid="uid://biowmge85lvt" path="res://skill tiles/skill2/skill2.tscn" id="7_4dugh"]
 [ext_resource type="PackedScene" uid="uid://d0xh5f6i58g4k" path="res://text/computer_count.tscn" id="7_re7it"]
@@ -20,13 +23,16 @@
 [ext_resource type="PackedScene" uid="uid://cv865vruee13x" path="res://skill tiles/skill2/skill2-2.tscn" id="9_grrlh"]
 [ext_resource type="PackedScene" uid="uid://1yvhcbxnus7j" path="res://text/cells_per_sec.tscn" id="9_n53tw"]
 [ext_resource type="PackedScene" uid="uid://debkbxwwcvnbm" path="res://skill tiles/skill2/skill2-2-1.tscn" id="10_0i4oc"]
+[ext_resource type="PackedScene" uid="uid://cvpsnr3rj444b" path="res://text/skill_point_count.tscn" id="10_d8vpj"]
 [ext_resource type="PackedScene" uid="uid://oul2prktuoya" path="res://skill tiles/skill2/skill2-3.tscn" id="11_bsumw"]
 [ext_resource type="PackedScene" uid="uid://85rchdosyucq" path="res://skill tiles/skill2/skill2-4.tscn" id="12_fwcvl"]
 [ext_resource type="PackedScene" uid="uid://cqgq6172rqd86" path="res://skill tiles/skill3/skill3.tscn" id="13_na0o7"]
 [ext_resource type="PackedScene" uid="uid://c8okp7jc1otre" path="res://skill tiles/skill3/skill3-1.tscn" id="14_73k8k"]
+[ext_resource type="PackedScene" uid="uid://dq73owyoxn5kb" path="res://upgrade tiles/skill_point.tscn" id="14_d00gp"]
 [ext_resource type="PackedScene" uid="uid://ojvkkwwerery" path="res://skill tiles/skill3/skill3-2.tscn" id="15_5xyti"]
 
 [node name="Main" type="Node2D" unique_id=1481820260]
+script = ExtResource("1_qs5eo")
 
 [node name="Background" parent="." unique_id=1225892145 instance=ExtResource("1_53q0u")]
 scale = Vector2(1.125, 1.125)
@@ -36,6 +42,10 @@ centered = false
 position = Vector2(576, 329)
 
 [node name="CellsPerSec" parent="." unique_id=54642062 instance=ExtResource("3_oagth")]
+
+[node name="Music" parent="." unique_id=697253928 instance=ExtResource("5_frbr6")]
+
+[node name="Click" parent="." unique_id=284815885 instance=ExtResource("6_o8j3b")]
 
 [node name="Counters" type="Node" parent="." unique_id=398599919]
 
@@ -85,6 +95,13 @@ offset_right = 1136.0
 offset_bottom = 638.0
 vertical_alignment = 1
 
+[node name="SkillPointCount" parent="Counters" unique_id=162876645 instance=ExtResource("10_d8vpj")]
+offset_left = 383.0
+offset_top = 17.0
+offset_right = 423.0
+offset_bottom = 40.0
+horizontal_alignment = 0
+
 [node name="UpgradeTiles" type="Node" parent="." unique_id=1664915217]
 
 [node name="UpgradeTile1" parent="UpgradeTiles" unique_id=1483650311 instance=ExtResource("3_4hmqs")]
@@ -99,52 +116,62 @@ position = Vector2(957, 370)
 [node name="UpgradeTile4" parent="UpgradeTiles" unique_id=60904992 instance=ExtResource("6_vapsy")]
 position = Vector2(957, 492)
 
+[node name="SkillPoint" parent="UpgradeTiles" unique_id=1238220536 instance=ExtResource("14_d00gp")]
+position = Vector2(573, 61)
+
 [node name="SkillTiles" type="Node" parent="." unique_id=1472574042]
 
-[node name="Skill1" parent="SkillTiles" unique_id=1371862040 instance=ExtResource("4_c651c")]
-position = Vector2(63, 63)
-scale = Vector2(1, 1)
-
-[node name="Skill1-1" parent="SkillTiles" unique_id=201382861 instance=ExtResource("5_kfbq2")]
-position = Vector2(180, 63)
-scale = Vector2(1, 1)
-
-[node name="Skill1-2" parent="SkillTiles" unique_id=1980742934 instance=ExtResource("6_4dugh")]
-position = Vector2(297, 63)
-scale = Vector2(1, 1)
-
-[node name="Skill2" parent="SkillTiles" unique_id=1560284930 instance=ExtResource("7_4dugh")]
-position = Vector2(63, 297)
-scale = Vector2(1, 1)
-
-[node name="Skill2-1" parent="SkillTiles" unique_id=7497618 instance=ExtResource("8_67ri8")]
-position = Vector2(153, 351)
-scale = Vector2(1, 1)
-
-[node name="Skill2-2" parent="SkillTiles" unique_id=1594997492 instance=ExtResource("9_grrlh")]
-position = Vector2(153, 245)
-scale = Vector2(1, 1)
-
-[node name="Skill2-2-1" parent="SkillTiles" unique_id=650783291 instance=ExtResource("10_0i4oc")]
-position = Vector2(239, 204)
-scale = Vector2(0.95, 0.95)
-
-[node name="Skill2-3" parent="SkillTiles" unique_id=1058102493 instance=ExtResource("11_bsumw")]
-position = Vector2(238, 298)
-scale = Vector2(0.95, 0.95)
-
-[node name="Skill2-4" parent="SkillTiles" unique_id=1778783965 instance=ExtResource("12_fwcvl")]
-position = Vector2(326, 298)
-scale = Vector2(0.95, 0.95)
-
-[node name="Skill3" parent="SkillTiles" unique_id=512464702 instance=ExtResource("13_na0o7")]
-position = Vector2(63, 511)
+[node name="Skill3-2" parent="SkillTiles" unique_id=170577075 instance=ExtResource("15_5xyti")]
+position = Vector2(252, 511)
 scale = Vector2(1, 1)
 
 [node name="Skill3-1" parent="SkillTiles" unique_id=2106996158 instance=ExtResource("14_73k8k")]
 position = Vector2(159, 511)
 scale = Vector2(1, 1)
 
-[node name="Skill3-2" parent="SkillTiles" unique_id=170577075 instance=ExtResource("15_5xyti")]
-position = Vector2(252, 511)
+[node name="Skill3" parent="SkillTiles" unique_id=512464702 instance=ExtResource("13_na0o7")]
+position = Vector2(63, 511)
 scale = Vector2(1, 1)
+
+[node name="Skill2-4" parent="SkillTiles" unique_id=1778783965 instance=ExtResource("12_fwcvl")]
+position = Vector2(326, 298)
+scale = Vector2(0.95, 0.95)
+
+[node name="Skill2-3" parent="SkillTiles" unique_id=1058102493 instance=ExtResource("11_bsumw")]
+position = Vector2(238, 298)
+scale = Vector2(0.95, 0.95)
+
+[node name="Skill2-2-1" parent="SkillTiles" unique_id=650783291 instance=ExtResource("10_0i4oc")]
+position = Vector2(239, 204)
+scale = Vector2(0.95, 0.95)
+
+[node name="Skill2-2" parent="SkillTiles" unique_id=1594997492 instance=ExtResource("9_grrlh")]
+position = Vector2(153, 245)
+scale = Vector2(1, 1)
+
+[node name="Skill2-1" parent="SkillTiles" unique_id=7497618 instance=ExtResource("8_67ri8")]
+position = Vector2(153, 351)
+scale = Vector2(1, 1)
+
+[node name="Skill2" parent="SkillTiles" unique_id=1560284930 instance=ExtResource("7_4dugh")]
+position = Vector2(63, 297)
+scale = Vector2(1, 1)
+
+[node name="Skill1-2" parent="SkillTiles" unique_id=1980742934 instance=ExtResource("6_4dugh")]
+position = Vector2(297, 63)
+scale = Vector2(1, 1)
+
+[node name="Skill1-1" parent="SkillTiles" unique_id=201382861 instance=ExtResource("5_kfbq2")]
+position = Vector2(180, 63)
+scale = Vector2(1, 1)
+
+[node name="Skill1" parent="SkillTiles" unique_id=1371862040 instance=ExtResource("4_c651c")]
+position = Vector2(63, 63)
+scale = Vector2(1, 1)
+
+[connection signal="cat" from="SkillTiles/Skill3-2" to="Homunculus" method="_on_skill_32_cat"]
+[connection signal="suit" from="SkillTiles/Skill3-1" to="Homunculus" method="_on_skill_31_suit"]
+[connection signal="head" from="SkillTiles/Skill2-3" to="Homunculus" method="_on_skill_23_head"]
+[connection signal="arms" from="SkillTiles/Skill2-2" to="Homunculus" method="_on_skill_22_arms"]
+[connection signal="legs" from="SkillTiles/Skill2-1" to="Homunculus" method="_on_skill_21_legs"]
+[connection signal="input_event" from="SkillTiles/Skill1-2" to="SkillTiles/Skill1" method="_on_skill_12_input_event"]

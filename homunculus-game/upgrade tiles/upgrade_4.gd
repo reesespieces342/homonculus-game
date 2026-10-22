@@ -24,4 +24,4 @@ func _on_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 			if Globals.cell_count >= 5000:
 				Globals.cell_count -= 5000
 				Globals.computer_count += 1
-				Globals.cells_per_sec += 130
+				Globals.cells_per_sec += Globals.cpcomputer

@@ -1,22 +1,28 @@
 [gd_scene format=3 uid="uid://c6psfwv1eobmk"]
 
-[ext_resource type="Script" uid="uid://cbpoeft2eyfv" path="res://skill tiles/skill_tile.gd" id="1_0860c"]
-[ext_resource type="Texture2D" uid="uid://dkuu5y2am3iff" path="res://assets/background/round_button_unselected.png" id="2_ctov4"]
+[ext_resource type="Script" uid="uid://bdchyweoxl1cb" path="res://skill tiles/skill1/skill_1.gd" id="1_kf2bs"]
+[ext_resource type="Texture2D" uid="uid://5mruyb2ff0ge" path="res://assets/skills/1unselected.png" id="2_j64sm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2838g"]
 radius = 50.69785
 
 [node name="Skill1" type="Area2D" unique_id=1371862040]
 scale = Vector2(1.5, 1.5)
-script = ExtResource("1_0860c")
+script = ExtResource("1_kf2bs")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1218452919]
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_ctov4")
+texture = ExtResource("2_j64sm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=513196331]
 scale = Vector2(0.75, 0.75)
 shape = SubResource("CircleShape2D_2838g")
 
+[node name="Label" type="Label" parent="." unique_id=927119069]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Hovering"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b77aymssi3g5r"]
+
+[ext_resource type="AudioStream" uid="uid://c3a1yjcgf5ipl" path="res://assets/sfx/People shit 8 bit Slipknot Emulation-8 bit Arcade.mp3" id="1_j0im1"]
+
+[node name="Music" type="AudioStreamPlayer" unique_id=697253928]
+stream = ExtResource("1_j0im1")
+autoplay = true

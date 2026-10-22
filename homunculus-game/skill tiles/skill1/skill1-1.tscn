@@ -1,22 +1,28 @@
 [gd_scene format=3 uid="uid://esn0buu34kdc"]
 
-[ext_resource type="Script" uid="uid://cbpoeft2eyfv" path="res://skill tiles/skill_tile.gd" id="1_a8iqs"]
-[ext_resource type="Texture2D" uid="uid://dkuu5y2am3iff" path="res://assets/background/round_button_unselected.png" id="2_cmlpl"]
+[ext_resource type="Script" uid="uid://c8770o1bu1h1i" path="res://skill tiles/skill1/skill_1_1.gd" id="1_m3dpe"]
+[ext_resource type="Texture2D" uid="uid://o7ql3hfat8tv" path="res://assets/skills/1-1unselected.png" id="2_m3dpe"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2838g"]
 radius = 47.60745
 
 [node name="Skill1-1" type="Area2D" unique_id=1371862040]
 scale = Vector2(0.75, 0.75)
-script = ExtResource("1_a8iqs")
+script = ExtResource("1_m3dpe")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1218452919]
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_cmlpl")
+texture = ExtResource("2_m3dpe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=513196331]
 scale = Vector2(0.8, 0.8)
 shape = SubResource("CircleShape2D_2838g")
 
+[node name="Label" type="Label" parent="." unique_id=84181460]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "1-1"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
