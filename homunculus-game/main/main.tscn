@@ -44,8 +44,10 @@ position = Vector2(576, 329)
 [node name="CellsPerSec" parent="." unique_id=54642062 instance=ExtResource("3_oagth")]
 
 [node name="Music" parent="." unique_id=697253928 instance=ExtResource("5_frbr6")]
+volume_db = -15.0
 
 [node name="Click" parent="." unique_id=284815885 instance=ExtResource("6_o8j3b")]
+volume_db = -7.5
 
 [node name="Counters" type="Node" parent="." unique_id=398599919]
 
