@@ -13,7 +13,7 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	label.text = "%s SP\nClicks" % [sp_req]
+	label.text = "%s SP\nUnlock Branch" % [sp_req]
 	if label.visible:
 		var pos = get_global_mouse_position()
 		label.global_position = Vector2(pos.x + 15, pos.y - 25)

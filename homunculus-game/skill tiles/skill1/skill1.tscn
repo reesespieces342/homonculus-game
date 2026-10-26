@@ -21,7 +21,6 @@ shape = SubResource("CircleShape2D_2838g")
 [node name="Label" type="Label" parent="." unique_id=927119069]
 offset_right = 40.0
 offset_bottom = 23.0
-text = "Hovering"
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

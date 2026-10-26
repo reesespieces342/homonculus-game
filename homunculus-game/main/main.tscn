@@ -48,6 +48,7 @@ volume_db = -15.0
 
 [node name="Click" parent="." unique_id=284815885 instance=ExtResource("6_o8j3b")]
 volume_db = -7.5
+pitch_scale = 2.0
 
 [node name="Counters" type="Node" parent="." unique_id=398599919]
 
@@ -124,11 +125,11 @@ position = Vector2(573, 61)
 [node name="SkillTiles" type="Node" parent="." unique_id=1472574042]
 
 [node name="Skill3-2" parent="SkillTiles" unique_id=170577075 instance=ExtResource("15_5xyti")]
-position = Vector2(252, 511)
+position = Vector2(296, 511)
 scale = Vector2(1, 1)
 
 [node name="Skill3-1" parent="SkillTiles" unique_id=2106996158 instance=ExtResource("14_73k8k")]
-position = Vector2(159, 511)
+position = Vector2(179, 511)
 scale = Vector2(1, 1)
 
 [node name="Skill3" parent="SkillTiles" unique_id=512464702 instance=ExtResource("13_na0o7")]

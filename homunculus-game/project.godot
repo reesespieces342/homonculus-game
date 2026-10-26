@@ -33,7 +33,6 @@ folder_colors={
 "res://assets/skills/": "blue",
 "res://assets/upgrades/": "purple",
 "res://background/": "green",
-"res://globals/": "red",
 "res://main/": "orange",
 "res://skill tiles/": "purple",
 "res://upgrade tiles/": "teal"
